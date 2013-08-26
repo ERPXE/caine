@@ -1,0 +1,26 @@
+LABEL CAINELIVE
+MENU LABEL ^Caine Live
+KERNEL er/plugins/caine/vmlinuz
+INITRD er/plugins/caine/initrd.gz 
+APPEND file=er/plugins/caine/custom.seed vga=normal boot=casper netboot=nfs nfsroot=10.0.0.1:/tftpboot/er/shares/caine/ ramdisk_size=200000 nolock root=/dev/nfs dhcp aufs
+TEXT HELP
+                 Caine Live.
+ENDTEXT
+
+LABEL CAINEINSTALL
+MENU LABEL ^Caine Install
+KERNEL er/plugins/caine/vmlinuz
+INITRD er/plugins/caine/initrd.gz 
+APPEND file=er/plugins/caine/custom.seed vga=normal boot=casper netboot=nfs nfsroot=10.0.0.1:/tftpboot/er/shares/caine/ ramdisk_size=200000 nolock root=/dev/nfs dhcp only-ubiquity aufs
+TEXT HELP
+                 Caine Install.
+ENDTEXT
+
+LABEL CAINELIVETEXTONLY
+MENU LABEL ^Caine Live textonly mode
+KERNEL er/plugins/caine/vmlinuz
+INITRD er/plugins/caine/initrd.gz 
+APPEND file=er/plugins/caine/custom.seed vga=normal boot=casper netboot=nfs nfsroot=10.0.0.1:/tftpboot/er/shares/caine/ ramdisk_size=200000 nolock root=/dev/nfs dhcp text aufs
+TEXT HELP
+                 Caine textonly mode.
+ENDTEXT

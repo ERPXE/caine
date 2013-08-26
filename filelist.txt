@@ -1,0 +1,8 @@
+.:
+cainemain.menu
+caine.menu
+caine.png
+custom.seed
+filelist.txt
+initrd.gz
+vmlinuz
